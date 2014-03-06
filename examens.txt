@@ -3,3 +3,4 @@ DIMARTS- BBDD? (Doctrine)
 DIMECRES- C++  (Rectangle,punters i llistes)
 DIJOUS- CSS?   (Teoria)
 DIVENDRES- ENTORNS DESENVOLUPAMENT (Merda)
+que polles pasa aqui
