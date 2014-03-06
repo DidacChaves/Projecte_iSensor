@@ -9,6 +9,7 @@ cli-config.php
 sftp-config.json
 composer.lock
 composer.phar
+composer.json
 
 #################
 ## Eclipse
