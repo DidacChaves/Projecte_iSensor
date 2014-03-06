@@ -6,7 +6,7 @@ config/*
 vendor/*
 bootstrap.php
 cli-config.php
-sftp-config.jshon
+sftp-config.json
 composer.lock
 composer.phar
 
