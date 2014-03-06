@@ -2,5 +2,5 @@ DILLUNS-SERVER (cookies,sessions,posts,DNS)
 DIMARTS- BBDD? (Doctrine)
 DIMECRES- C++  (Rectangle,punters i llistes)
 DIJOUS- CSS?   (Teoria)
-DIVENDRES- ENTORNS DESENVOLUPAMENT (Merda)
-que polles pasa aqui
+DIVENDRES- ENTORNS DESENVOLUPAMENT
+test
