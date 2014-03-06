@@ -1,6 +1,19 @@
 #################
+# Doctrine
+#################
+
+config/*
+vendor/*
+bootstrap.php
+cli-config.php
+sftp-config.jshon
+composer.lock
+composer.phar
+
+#################
 ## Eclipse
 #################
+
 
 *.pydevproject
 .project
@@ -181,7 +194,18 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
 
+#linux
+.*
+!.gitignore
+!.htaccess
+*~
 
 #############
 ## Python
