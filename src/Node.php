@@ -186,4 +186,37 @@ class Node
     {
         return $this->sensors;
     }
+
+    /**
+     * Add grups
+     *
+     * @param \GrupNode $grups
+     * @return Node
+     */
+    public function addGrup(\GrupNode $grups)
+    {
+        $this->grups[] = $grups;
+
+        return $this;
+    }
+
+    /**
+     * Remove grups
+     *
+     * @param \GrupNode $grups
+     */
+    public function removeGrup(\GrupNode $grups)
+    {
+        $this->grups->removeElement($grups);
+    }
+
+    /**
+     * Get grups
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getGrups()
+    {
+        return $this->grups;
+    }
 }
