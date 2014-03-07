@@ -2,6 +2,7 @@
 # Doctrine
 #################
 
+nbproject/*
 config/*
 vendor/*
 bootstrap.php
