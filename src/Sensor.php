@@ -1,11 +1,13 @@
 <?php
+
 /**
  * Sensor
  *
  * @Table(name="Sensor")
  * @Entity
  */
-Class Sensor{
+Class Sensor {
+
     /**
      * [$id description]
      * @var integer
@@ -16,38 +18,43 @@ Class Sensor{
      * 
      */
     private $id;
- /**
-  * 
-  * [$node description]
-  * @var integer
-  * @ManyToOne(targetEntity="Node", inversedBy="Sensor")
-  *  
-  */
-       private $node;
- /**
-  * 
-  * [$tipusSensor description]
-  * @var integer
-  * @ManyToOne(targetEntity="TipusSensor", inversedBy="Sensor") 
-  * 
-  */
-       private $tipusSensor;
- /**
-  * 
-  * [$registre description]
-  * @var integer
-  * @ManyToOne(targetEntity="Registre", inversedBy="Sensor") 
-  * 
-  */
-       Private $registre;
+
+    /**
+     * 
+     * [$node description]
+     * @var integer
+     * @ManyToOne(targetEntity="Node", inversedBy="Sensor")
+     *  
+     */
+    private $node;
+
+    /**
+     * 
+     * [$tipusSensor description]
+     * @var integer
+     * @ManyToOne(targetEntity="TipusSensor", inversedBy="Sensor") 
+     * 
+     */
+    private $tipusSensor;
+
+    /** @Column(type="date") * */
+    private $UltimaLectura;
+
+    /**
+     * 
+     * [$registre description]
+     * @var integer
+     * @ManyToOne(targetEntity="Registre", inversedBy="Sensor") 
+     * 
+     */
+    Private $registre;
 
     /**
      * Get id
      *
      * @return integer 
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -57,8 +64,7 @@ Class Sensor{
      * @param \Node $node
      * @return Sensor
      */
-    public function setNode(\Node $node = null)
-    {
+    public function setNode(\Node $node = null) {
         $this->node = $node;
 
         return $this;
@@ -69,8 +75,7 @@ Class Sensor{
      *
      * @return \Node 
      */
-    public function getNode()
-    {
+    public function getNode() {
         return $this->node;
     }
 
@@ -80,8 +85,7 @@ Class Sensor{
      * @param \TipusSensor $tipusSensor
      * @return Sensor
      */
-    public function setTipusSensor(\TipusSensor $tipusSensor = null)
-    {
+    public function setTipusSensor(\TipusSensor $tipusSensor = null) {
         $this->tipusSensor = $tipusSensor;
 
         return $this;
@@ -92,8 +96,7 @@ Class Sensor{
      *
      * @return \TipusSensor 
      */
-    public function getTipusSensor()
-    {
+    public function getTipusSensor() {
         return $this->tipusSensor;
     }
 
@@ -103,8 +106,7 @@ Class Sensor{
      * @param \Registre $registre
      * @return Sensor
      */
-    public function setRegistre(\Registre $registre = null)
-    {
+    public function setRegistre(\Registre $registre = null) {
         $this->registre = $registre;
 
         return $this;
@@ -115,8 +117,8 @@ Class Sensor{
      *
      * @return \Registre 
      */
-    public function getRegistre()
-    {
+    public function getRegistre() {
         return $this->registre;
     }
+
 }

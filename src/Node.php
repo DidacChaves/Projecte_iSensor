@@ -24,8 +24,7 @@ class Node
     /** @Column(type="string") **/
     private $posicio;
     
-    /** @Column(type="date") **/
-    private $UltimaLectura;
+    
    
     /** @Column(type="date") **/
     private $DataIntroduccioPila;
@@ -108,28 +107,7 @@ class Node
         return $this->posicio;
     }
 
-    /**
-     * Set UltimaLectura
-     *
-     * @param \DateTime $ultimaLectura
-     * @return Node
-     */
-    public function setUltimaLectura($ultimaLectura)
-    {
-        $this->UltimaLectura = $ultimaLectura;
-
-        return $this;
-    }
-
-    /**
-     * Get UltimaLectura
-     *
-     * @return \DateTime 
-     */
-    public function getUltimaLectura()
-    {
-        return $this->UltimaLectura;
-    }
+    
 
     /**
      * Set DataIntroduccioPila
