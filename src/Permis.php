@@ -20,6 +20,9 @@ class Permis
    
     /** @Column(type="string") **/
     private $nom;
+
+    /** @Column(type="string") **/
+    private $zona;
    
     /** @Column(type="string", length=255, nullable=false) **/
     private $descripcio;
