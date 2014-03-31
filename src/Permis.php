@@ -131,4 +131,27 @@ class Permis
     {
         return $this->usuaris;
     }
+
+    /**
+     * Set zona
+     *
+     * @param string $zona
+     * @return Permis
+     */
+    public function setZona($zona)
+    {
+        $this->zona = $zona;
+
+        return $this;
+    }
+
+    /**
+     * Get zona
+     *
+     * @return string 
+     */
+    public function getZona()
+    {
+        return $this->zona;
+    }
 }

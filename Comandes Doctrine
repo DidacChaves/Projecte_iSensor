@@ -1,0 +1,8 @@
+Creem BD a partir de fitxers:
+	- php vendor/bin/doctrine orm:schema-tool:create
+Actualitzem BD a partir de fitxers:
+	- php vendor/bin/doctrine orm:schema-tool:Update –force --dump-sql
+Actualitzem fitxers a partir de la BD:
+	- php vendor/bin/doctrine orm:convert-mapping --force --from-database  	annotation /var/www/projecte1/src
+Generem gets i sets:
+	- vendor/bin/doctrine orm:generate-entities ./src/
