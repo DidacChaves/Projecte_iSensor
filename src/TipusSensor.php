@@ -26,7 +26,7 @@ class TipusSensor
     /**
      * @var string
      * 
-     * @Column(name="unitat", type="string", length=255, nullable=false)
+     * @Column(name="unitat", type="string", length=255, nullable=true)
      */
     private $unitat;
 
@@ -36,6 +36,8 @@ class TipusSensor
      */
     protected $sensors;
     /**
+     * Indica si la dada sera de tiups: INT, String, Float. Per despres poder fer els càlculs
+     * 
      * @var string
      * 
      * @Column(name="tipusDada", type="string", length=255, nullable=false)

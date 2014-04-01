@@ -37,7 +37,10 @@ Class Sensor {
      */
     private $tipusSensor;
 
-    /** @Column(name="ultimaLectura", type="string", nullable=true) * */
+    /** 
+     * Retorna la ultima lectura de cada sensor
+     * @var string
+     */
     private $UltimaLectura;
 
     /**
@@ -89,27 +92,6 @@ Class Sensor {
      */
     public function getTipusSensor() {
         return $this->tipusSensor;
-    }
-
-    /**
-     * Set registre
-     *
-     * @param \Registre $registre
-     * @return Sensor
-     */
-    public function setRegistre(\Registre $registre = null) {
-        $this->registre = $registre;
-
-        return $this;
-    }
-
-    /**
-     * Get registre
-     *
-     * @return \Registre 
-     */
-    public function getRegistre() {
-        return $this->registre;
     }
 
 }
