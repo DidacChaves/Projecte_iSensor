@@ -17,7 +17,11 @@ class GrupNode
      * 
      */
     private $id;
-   /** @Column(type="string") **/
+   /** 
+    * [$nom description]
+    * @var string
+    * @Column(type="string") 
+    */
     private $nom;
    /**
      * @ManyToMany(targetEntity="Node", mappedBy="grups") 

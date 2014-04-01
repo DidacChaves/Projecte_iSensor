@@ -18,15 +18,27 @@ class Node
      */
     private $id;
    
-    /** @Column(type="string") **/
+    /** 
+     * [$ip description]
+     * @var string
+     * @Column(type="string") 
+     */
     private $ip;
    
-    /** @Column(type="string") **/
+    /** 
+     * [$posicio description]
+     * @var string
+     * @Column(type="string")
+     */
     private $posicio;
     
     
    
-    /** @Column(type="date") **/
+    /** 
+     * [$DataIntroduccioPila description]
+     * @var date
+     * @Column(type="date")
+     */
     private $DataIntroduccioPila;
    
     /**

@@ -18,16 +18,32 @@ class Usuari
      */
     private $id;
    
-    /** @Column(type="string") **/
+    /**
+     * [$nom description]
+     * @var [type]
+     * @Column(type="string")
+     */
     private $nom;
    
-    /** @Column(type="string") **/
+    /** 
+     * [$contrasenya description]
+     * @var [type]
+     * @Column(type="string")
+     */
     private $contrasenya;
     
-    /** @Column(type="date") **/
+    /** 
+     * [$UltimaVisita description]
+     * @var [type]
+     * @Column(type="string")
+     */
     private $UltimaVisita;
    
-    /** @Column(type="string",length=255, nullable=false) **/
+    /** 
+     * [$email description]
+     * @var [type]
+     * @Column(type="string",length=255, nullable=false)
+     */
     private $email;
    
     /**

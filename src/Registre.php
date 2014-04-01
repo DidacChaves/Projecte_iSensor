@@ -17,8 +17,10 @@ class Registre
     private $id;
 
     /**
-    * @Column(name="dataHora", type="datetime", nullable=false)
-    */
+     * @var string
+     * 
+     * @Column(name="dataHora", type="datetime", nullable=false)
+     */
     private $dataHora;
 
     /**

@@ -18,13 +18,25 @@ class Permis
      */
     private $id;
    
-    /** @Column(type="string") **/
+    /** 
+     * [$nom description]
+     * @var string
+     * @Column(type="string")
+     */
     private $nom;
 
-    /** @Column(type="string") **/
+    /** 
+     * [$zona description]
+     * @var [string]
+     * @Column(type="string")
+     */
     private $zona;
    
-    /** @Column(type="string", length=255, nullable=false) **/
+    /** 
+     * [$descripcio description]
+     * @var string
+     * @Column(type="string", length=255, nullable=false)
+     */
     private $descripcio;
     
    /**
