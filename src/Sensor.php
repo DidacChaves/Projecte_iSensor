@@ -40,6 +40,7 @@ Class Sensor {
     /** 
      * Retorna la ultima lectura de cada sensor
      * @var string
+     * @Column(type="string")
      */
     private $UltimaLectura;
 
