@@ -17,7 +17,7 @@ class Registre
     private $id;
 
     /**
-     * @var string
+     * @var datetime
      * 
      * @Column(name="dataHora", type="datetime", nullable=false)
      */
