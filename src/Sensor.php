@@ -37,17 +37,8 @@ Class Sensor {
      */
     private $tipusSensor;
 
-    /** @Column(type="date") * */
+    /** @Column(name="ultimaLectura", type="string", nullable=true) * */
     private $UltimaLectura;
-
-    /**
-     * 
-     * [$registre description]
-     * @var integer
-     * @ManyToOne(targetEntity="Registre", inversedBy="Sensor") 
-     * 
-     */
-    Private $registre;
 
     /**
      * Get id
