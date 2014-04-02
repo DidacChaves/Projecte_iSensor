@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>iSensor</title>
+
+	<!-- Core CSS - Include with every page -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<!-- Page-Level Plugin CSS - Morris -->
+	<link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+	<!-- SB Admin CSS - Include with every page -->
+	<link href="css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">iSensor</a>
+			</div>
+			<!-- /.navbar-header -->
+			<ul class="nav navbar-top-links navbar-right">
+				<!-- /.dropdown -->
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu dropdown-user">
+						<li><a href="perfil.html"><i class="fa fa-user fa-fw"></i> Perfil</a>
+						</li>
+						<li><a href="#"><i class="fa fa-gear fa-fw"></i> Preferencies</a>
+						</li>
+						<li class="divider"></li>
+						<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Sortir</a>
+						</li>
+					</ul>
+					<!-- /.dropdown-user -->
+				</li>
+				<!-- /.dropdown -->
+			</ul>
+			<!-- /.navbar-top-links -->
+		</nav>
+		<!-- /.navbar-static-top -->
+		<nav class="navbar-default navbar-static-side" role="navigation">
+			<div class="sidebar-collapse">
+				<ul class="nav" id="side-menu">
+					<li>
+						<a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Taulell</a>
+					</li>
+					<li>
+         		<a href="listNode.html"><i class="fa fa-shield fa-fw"></i> Nodes</a>
+	        </li>
+					<li>
+						<a href="Error.html"><i class="fa fa-exclamation-triangle fa-fw"></i> Errors</a>
+					</li>
+				</ul>
+				<!-- /#side-menu -->
+			</div>
+			<!-- /.sidebar-collapse -->
+		</nav>
+		<!-- /.navbar-static-side -->
+
+		<div id="page-wrapper">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="page-header">Grup de Nodes</h1>
+				</div>
+				<!-- /.col-lg-12 -->
+			</div>
+			<!-- /.row -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Planta XXXXX
+							<div class="pull-right">
+								<div class="btn-group">
+									<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+										Escala
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu pull-right" role="menu">
+										<li><a onclick="escala(1)">Ultim Dia</a>
+										</li>
+										<li><a onclick="escala(2)">Ultim Semana</a>
+										</li>
+										<li><a onclick="escala()">Ultim Mes</a>
+										</li>
+										<li class="divider"></li>
+										<li><a onclick="escala(4)">Ultim Any</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- /.panel-heading -->
+						<div class="panel-body">
+							<div  class="morris" id="morris-line-chart"></div>
+						</div>
+						<!-- /.panel-body -->
+					</div>
+					<!-- /.panel -->
+				</div>
+
+				<!-- /.col-lg-12 -->
+				<div class="col-lg-12">
+					
+								<a href="listNode.html" class="btn btn-default btn-lg btn-block">enrrere</a>
+					</div>
+					<!-- /.col-lg-6 -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /#page-wrapper -->
+
+		</div>
+		<!-- /#wrapper -->
+
+		<!-- Core Scripts - Include with every page -->
+		<script src="js/jquery-1.10.2.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+		<!-- Page-Level Plugin Scripts - Morris -->
+		<script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
+		<script src="js/plugins/morris/morris.js"></script>
+
+		<!-- SB Admin Scripts - Include with every page -->
+		<script src="js/sb-admin.js"></script>
+
+		<!-- Page-Level Demo Scripts - Morris - Use for reference -->
+		<script>
+			Morris.Line({
+				element: 'morris-line-chart',
+				data: [{
+					y: '2012-02-24 16:00',
+					a: 15,
+					b: 16,
+					c: 19,
+					d: 12
+				}, {
+					y: '2012-02-24 17:00',
+					a: 17,
+					b: 16,
+					c: 15,
+					d: 12
+				}, {
+					y: '2012-02-24 18:00',
+					a: 21,
+					b: 23,
+					c: 26,
+					d: 1
+				}, {
+					y: '2012-02-24 19:00',
+					a: 20,
+					b: 20,
+					c: 10,
+					d: 21
+				}, {
+					y: '2012-02-24 20:00',
+					a: 23,
+					b: 21,
+					c: 12,
+					d: 30
+				}, {
+					y: '2012-02-24 21:00',
+					a: 19,
+					b: 20,
+					c: 18,
+					d: 12
+				}, {
+					y: '2012-02-24 22:00',
+					a: 15,
+					b: 18,
+					c: 15,
+					d: 12
+				}],
+			xkey: 'y',
+      ykeys: ['a', 'b', 'c','d'],
+      labels: ['Aula 17','Aula 18', 'Aula 19', 'Aula 20'],
+      hideHover: 'auto',
+      resize: true,
+      xLabelAngle: 35,
+      postUnits: ' Cº',
+      formatter: function (y) {
+            return y + " Cº";
+        }
+			});
+		</script>
+
+	</body>
+
+	</html>

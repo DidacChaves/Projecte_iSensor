@@ -1,79 +1,223 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iSensor</title>
+  <!-- Core CSS - Include with every page -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+  <!-- Page-Level Plugin CSS - Dashboard -->
+  <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+  <!-- SB Admin CSS - Include with every page -->
+  <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+<body>
+  <div id="wrapper">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">iSensor</a>
+      </div>
+      <!-- /.navbar-header -->
+      <ul class="nav navbar-top-links navbar-right">
+        <!-- /.dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-user">
+            <li><a href="perfil.html"><i class="fa fa-user fa-fw"></i> Perfil</a>
+            </li>
+            <li><a href="preferencies.html"><i class="fa fa-gear fa-fw"></i> Preferencies</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Sortir</a>
+            </li>
+          </ul>
+          <!-- /.dropdown-user -->
+        </li>
+        <!-- /.dropdown -->
+      </ul>
+      <!-- /.navbar-top-links -->
+    </nav>
+    <!-- /.navbar-static-top -->
+    <nav class="navbar-default navbar-static-side" role="navigation">
+      <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+          <li class="active">
+            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Taulell</a>
+          </li>
+          <li>
+            <a href="listNode.html"><i class="fa fa-shield fa-fw"></i> Nodes</a>
+          </li>
+          <li>
+            <a href="Error.html"><i class="fa fa-exclamation-triangle fa-fw"></i> Errors</a>
+          </li>
+        </ul>
+        <!-- /#side-menu -->
+      </div>
+      <!-- /.sidebar-collapse -->
+    </nav>
+    <!-- /.navbar-static-side -->
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Projecte isensor : Projecte sensor" />
+    <div id="page-wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Taulell de Control</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <i class="fa fa-bar-chart-o fa-fw"></i> Grafica de Temperatures en ºC
+              <div class="pull-right">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                    Sensors
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu pull-right" role="menu">
+                    <li><a onclick="">Temperatura</a>
+                    </li>
+                    <li><a onclick="">Humitat</a>
+                    </li>
+                    <li><a onclick="">Llum</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                    Escala
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu pull-right" role="menu">
+                    <li><a onclick="escala(1)">Ultim Dia</a>
+                    </li>
+                    <li><a onclick="escala(2)">Ultim Semana</a>
+                    </li>
+                    <li><a onclick="escala(3)">Ultim Mes</a>
+                    </li>
+                    <li><a onclick="escala(4)">Ultim Any</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+              <div id="morris-line-chart"></div>
+            </div>
+            <!-- /.panel-body -->
+          </div>
+          <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <i class="fa fa-bell fa-fw"></i> Notifications Panel
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+              <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-danger">
+                  <i class="fa fa-bolt fa-fw"></i> Node 3 no respon
+                  <span class="pull-right text-muted small"><em>fa 2 minuts</em>
+                  </span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-warning">
+                  <i class="fa fa-warning fa-fw"></i> Falta piles Node 2
+                  <span class="pull-right text-muted small"><em>fa 4 minuts</em>
+                  </span>
+                </a>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Projecte isensor</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/RubenFu/Projecte_iSensor">View on GitHub</a>
-
-          <h1 id="project_title">Projecte isensor</h1>
-          <h2 id="project_tagline">Projecte sensor</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/RubenFu/Projecte_iSensor/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/RubenFu/Projecte_iSensor/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+                <a href="#" class="list-group-item list-group-item-danger">
+                  <i class="fa fa-times-circle fa-fw"></i> Error en la lectura
+                  <span class="pull-right text-muted small"><em>fa 27 minuts</em>
+                  </span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-info">
+                  <i class="fa fa-upload fa-fw"></i> BBDD actualitzada
+                  <span class="pull-right text-muted small"><em>fa 43 minuts</em>
+                  </span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-warning">
+                  <i class="fa fa-warning fa-fw"></i> ....
+                  <span class="pull-right text-muted small"><em>11:32 AM</em>
+                  </span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-info">
+                  <i class="fa fa-bolt fa-fw"></i> ....
+                  <span class="pull-right text-muted small"><em>11:13 AM</em>
+                  </span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-warning">
+                  <i class="fa fa-warning fa-fw"></i> ....
+                  <span class="pull-right text-muted small"><em>10:57 AM</em>
+                  </span>
+                </a>
+              </div>
+              <a href="Error.html" class="btn btn-default btn-block">View All Alerts</a>
+            </div>
+            <!-- /.panel-body -->
+          </div>
+          <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-5 -->
+        <!-- /.col-lg-6 -->
+      </div>
+      
+      <!-- /.row -->
     </div>
+    <!-- /#page-wrapper -->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+  </div>
+  <!-- /#wrapper -->
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+  <!-- Core Scripts - Include with every page -->
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+  <!-- Page-Level Plugin Scripts - Dashboard -->
+  <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
+  <script src="js/plugins/morris/morris.js"></script>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+  <!-- SB Admin Scripts - Include with every page -->
+  <script src="js/sb-admin.js"></script>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+  <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
+  <script src="js/data.js"></script>
+  <script>
+  function escala(x){
+    switch(x) {
+      case 1:
+        document.getElementById('morris-line-chart').innerHTML = "";
+        Morris.Line(dia);
+        break;
+      case 2:
+        document.getElementById('morris-line-chart').innerHTML = "";
+        Morris.Line(setmana);
+        break;
+      case 3:
+        document.getElementById('morris-line-chart').innerHTML = "";
+        Morris.Line(mes);
+        break;
+      case 4:
+        document.getElementById('morris-line-chart').innerHTML = "";
+        Morris.Line(any);
+    }
+  }
+  </script>
+</body>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Projecte isensor maintained by <a href="https://github.com/RubenFu">RubenFu</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
 </html>
