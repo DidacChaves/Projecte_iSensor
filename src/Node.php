@@ -209,4 +209,35 @@ class Node
     {
         return $this->grups;
     }
+
+
+/*! *********FUNCIONS ESPECIFIQUES************** */
+
+
+    public function updateNode($id,$ip,$posicio,$dataIntroduccioPila,$sensors,$GrupNodeAntic,$GrupNodeActual){
+
+        $Node = $entityManager->find('Node', $id);
+
+        $Node->setIp($ip);
+        $Node->setPosicio($posicio);
+        $Node->setDataIntroduccioPila($dataIntroduccioPila);
+        $Node->setTipusSensor($sensors);
+        $Node->removeGrup($GrupNodeAntic);
+        $Node->addGrup($GrupNodeActual);
+
+        $entityManager->persist($Node);
+        $entityManager->flush();
+
+    }
+
+
+    public function deleteNode($id){
+        
+
+    }
+
+
+
+
+
 }
