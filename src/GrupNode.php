@@ -104,4 +104,12 @@ class GrupNode
     {
         return $this->nodes;
     }
+
+
+    /*! *********FUNCIONS ESPECIFIQUES************** */
+
+
+    
+
+
 }
