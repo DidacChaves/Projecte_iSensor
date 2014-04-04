@@ -107,4 +107,5 @@ class GrupNode
 
     /*! *********FUNCIONS ESPECIFIQUES************** */
 
+    
 }

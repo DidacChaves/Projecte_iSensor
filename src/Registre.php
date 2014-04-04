@@ -116,3 +116,4 @@ class Registre
         return $this->sensor;
     }
 }
+
