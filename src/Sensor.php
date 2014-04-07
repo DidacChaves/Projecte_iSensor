@@ -37,6 +37,12 @@ Class Sensor {
      */
     private $tipusSensor;
 
+    /**
+     * @var registres[]
+     * @OneToMany(targetEntity="Registre", mappedBy="sensor")
+     */
+    protected $registres;
+
     /** 
      * Retorna la ultima lectura de cada sensor
      * @var string
