@@ -24,6 +24,7 @@ class Registre
     private $dataHora;
 
     /**
+     * es el Valor de tots els sensors, en cas de error es la explicació de l'error
      * @var string
      * 
      * @Column(name="valor", type="string", length=255, nullable=false)
